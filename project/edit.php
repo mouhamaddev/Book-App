@@ -1,5 +1,5 @@
 <?php
-// including the database connection file
+
 include_once("config.php");
 
 if(isset($_POST['update']))
@@ -24,10 +24,9 @@ if(isset($_POST['update']))
 }
 ?>
 <?php
-//getting id from url
+
 $id = $_GET['id'];
 
-//selecting data associated with this particular id
 $result = mysqli_query($mysqli, "SELECT * FROM users WHERE id=$id");
 
 while($res = mysqli_fetch_array($result))
